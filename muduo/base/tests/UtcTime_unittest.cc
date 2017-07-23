@@ -8,7 +8,7 @@ void passByConstReference(const UtcTime& x)
 
 void passByValue(UtcTime x)
 {
-	printf("%s\n", x.toStrng().c_str());
+	printf("%s\n", x.toString().c_str());
 }
 
 int main()
