@@ -3,6 +3,8 @@
 
 #include "Types.h"
 
+namespace muduo{
+
 class UtcTime
 {
 public:
@@ -52,6 +54,7 @@ inline double timeDifference(UtcTime high, UtcTime low)
 {
 	int64_t diff = high.microSecondsSinceEpoch() - low.microSecondsSinceEpoch();
 	return static_cast<double>(diff/UtcTime::kMicroSecondsPerSecond);
+}
 }
 
 #endif

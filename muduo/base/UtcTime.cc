@@ -4,6 +4,8 @@
 #define __STDC_FORMAT_MACROS // for PRId64
 #include <inttypes.h> // for int64_t 
 
+using namespace muduo;
+
 UtcTime::UtcTime() : microSecondsSinceEpoch_(0) { };
 
 UtcTime::UtcTime(int64_t microseconds) : microSecondsSinceEpoch_(microseconds){ }
