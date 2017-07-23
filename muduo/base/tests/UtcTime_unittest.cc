@@ -1,6 +1,8 @@
 #include "../UtcTime.h"
 #include <stdio.h>
 
+using muduo::UtcTime;
+
 void passByConstReference(const UtcTime& x)
 {
 	printf("%s\n", x.toString().c_str());

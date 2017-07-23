@@ -1,0 +1,7 @@
+add_executable(EventLoop_unittest EventLoop_unittest.cc)
+add_executable(TimerQueue_unittest TimerQueue_unittest.cc)
+
+target_link_libraries(EventLoop_unittest muduo_base muduo_net)
+target_link_libraries(TimerQueue_unittest muduo_base muduo_net)
+
+

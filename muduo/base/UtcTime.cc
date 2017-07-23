@@ -4,6 +4,7 @@
 #define __STDC_FORMAT_MACROS // for PRId64
 #include <inttypes.h> // for int64_t 
 
+using muduo::UtcTime;
 using namespace muduo;
 
 UtcTime::UtcTime() : microSecondsSinceEpoch_(0) { };
@@ -26,6 +27,12 @@ UtcTime UtcTime::now()
 	int64_t seconds = tv.tv_sec;
 	// return total microseconds
 	return UtcTime(seconds * kMicroSecondsPerSecond + tv.tv_usec);
+}
+
+// invaild time
+UtcTime UtcTime::invalid()
+{
+	return UtcTime();
 }
 
 
