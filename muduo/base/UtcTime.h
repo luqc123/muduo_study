@@ -48,7 +48,7 @@ inline bool operator==(UtcTime lhs, UtcTime rhs)
 }
 
 // Get time difference of two timestamps result in seconds
-inline double timeDifference(UtcTime high, UtcTime now)
+inline double timeDifference(UtcTime high, UtcTime low)
 {
 	int64_t diff = high.microSecondsSinceEpoch() - low.microSecondsSinceEpoch();
 	return static_cast<double>(diff/UtcTime::kMicroSecondsPerSecond);
