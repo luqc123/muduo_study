@@ -31,10 +31,10 @@ public:
 	int64_t microSecondsSinceEpoch() const { return microSecondsSinceEpoch_; }
 
 	static UtcTime now();
-	static cosnt int kMicroSecondsPerSecond = 1000 * 1000;
+	static const int kMicroSecondsPerSecond = 1000 * 1000;
 
 private:
-	int64 microSecondsSinceEpoch_;
+	int64_t  microSecondsSinceEpoch_;
 };
 
 inline bool operator<(UtcTime lhs, UtcTime rhs)
